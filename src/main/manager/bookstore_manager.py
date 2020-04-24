@@ -1,0 +1,2 @@
+class BookstoreManager:
+    pass
