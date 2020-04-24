@@ -1,16 +1,17 @@
-from src.main.model.bookstore import Bookstore
+from src.main.classes.bookstore import Bookstore
 
 
-class Calendar(Bookstore):
+class PreparationForEIT(Bookstore):
     def __init__(self, name, producer, genre_type, number_of_pages,
-                 text_language, new_condition, hard_cover, price_in_uah, year=None, leaky_calendar=None):
+                 text_language, new_condition, hard_cover, price_in_uah, availability_of_solutions_task=None,
+                 year_of_eit=None):
         super().__init__(name, producer, genre_type, number_of_pages,
                          text_language, new_condition, hard_cover, price_in_uah)
-        self.year = year
-        self.leaky_calendar = leaky_calendar
+        self.year_of_eit = year_of_eit
+        self.availability_of_solutions_task = availability_of_solutions_task
 
     def __del__(self):
-        print("calendar die")
+        print("student die")
         return
 
     def __str__(self):
@@ -22,7 +23,8 @@ class Calendar(Bookstore):
         new_condition = "New condition: {0}\n".format(self.new_condition)
         hard_cover = "Hard cover: {0}\n".format(self.hard_cover)
         price_in_uah = "Price in UAH: {0}\n".format(self.price_in_uah)
-        year = "Year: {0}\n".format(self.year)
-        leaky_calendar = "Leaky calendar: {0}\n".format(self.leaky_calendar)
+        availability_of_solutions_task = "Availability of solutions task: {0}\n".format(
+            self.availability_of_solutions_task)
+        year_of_eit = "Year of eit: {0}\n".format(self.year_of_eit)
         return name + producer + genre_type + number_of_pages + \
-               text_language + new_condition + hard_cover + price_in_uah + year + leaky_calendar
+               text_language + new_condition + hard_cover + price_in_uah + availability_of_solutions_task + year_of_eit

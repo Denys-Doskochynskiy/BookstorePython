@@ -1,4 +1,4 @@
-from src.main.model.bookstore import Bookstore
+from src.main.classes.bookstore import Bookstore
 
 
 class BooksWithAgeRestrictions(Bookstore):
