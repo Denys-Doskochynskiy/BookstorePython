@@ -26,3 +26,11 @@ class Calendar(Bookstore):
         leaky_calendar = "Leaky calendar: {0}\n".format(self.leaky_calendar)
         return name + producer + genre_type + number_of_pages + \
                text_language + new_condition + hard_cover + price_in_uah + year + leaky_calendar
+
+    def __repr__(self):
+        return 'GoodsForChildren(name=' + self.name + ', producer=' + str(self.producer) + \
+               ', genre_type=' + str(self.genre_type) + ', number_of_pages=' + str(self.number_of_pages) + \
+               ', text_language=' + str(self.text_language) + ', new_condition' + \
+               str(self.new_condition) + ', hard_cover=' + str(self.hard_cover) + \
+               ', price_in_uah=' + str(self.price_in_uah) + ', year=' + \
+               str(self.year) + ', leaky_calendar=' + str(self.leaky_calendar) + ')'

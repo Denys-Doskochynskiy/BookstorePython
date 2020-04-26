@@ -26,3 +26,11 @@ class BooksWithAgeRestrictions(Bookstore):
         foul_language = "Foul language: {0}\n".format(self.foul_language)
         return name + producer + genre_type + number_of_pages + \
                text_language + new_condition + hard_cover + price_in_uah + age_restrictions + foul_language
+
+    def __repr__(self):
+        return 'BooksWithAgeRestrictions(name=' + self.name + ', producer=' + str(self.producer) + \
+               ', genre_type=' + str(self.genre_type) + ', number_of_pages=' + str(self.number_of_pages) + \
+               ', text_language=' + str(self.text_language) + ', new_condition' + \
+               str(self.new_condition) + ', hard_cover=' + str(self.hard_cover) + \
+               ', price_in_uah=' + str(self.price_in_uah) + ', age_restrictions=' + str(self.age_restrictions) + \
+               ', foul_language=' + str(self.foul_language) + ')'
